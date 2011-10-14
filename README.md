@@ -8,6 +8,10 @@ django-host-settings is a small Django app which lets you easily manage settings
 Installation
 ------------
 
+    $ easy_install django-host-settings
+
+or
+
     $ git clone git://github.com/sandersnewmedia/django-host-settings.git
     $ cd django-host-settings
     $ python setup.py install
