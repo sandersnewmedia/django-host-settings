@@ -23,7 +23,9 @@ In your settings.py:
 
 Then run these commands:
 
+    $ echo "import os" >> settings.py
+    $ echo "PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))" >> settings.py
+    $ echo "from django_host_settings.settings import *" >> settings.py
     $ python manage.py createhostsettings
-    $ echo "\n\nfrom django_host_settings.settings import *" > settings.py
 
 You can now override any settings in your own settings file, created in the config/ directory.
