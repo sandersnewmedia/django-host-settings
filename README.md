@@ -3,7 +3,7 @@
 
 Overview
 --------
-django-host-settings is a small Django app which lets you easily manage settings for your development machines & servers.
+django-host-settings is a Django app which helps you create and load settings unique to each host running your Django project.
 
 Installation
 ------------
@@ -32,4 +32,6 @@ Then run these commands:
     $ echo "PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))" >> settings.py
     $ echo "from django_host_settings.settings import *" >> settings.py
     
-You can now override any settings in your own settings file, created in the config/ directory.
+You can now override any settings in your own settings file, created in the `config/` directory of your project's root.
+
+For instance, if your hostname is `sir-robin`, the `createhostsettings` command will create a file, `config/sir_robin.py` that you could define Django settings in, such as `DEBUG = True`, and these settings will be loaded along with and override the settings defined in `settings.py`.
