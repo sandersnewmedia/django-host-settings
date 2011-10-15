@@ -34,4 +34,4 @@ Then run these commands:
     
 You can now override any settings in your own settings file, created in the `config/` directory of your project's root.
 
-For instance, if your hostname is `sir-robin`, the `createhostsettings` command will create a file, `config/sir_robin.py` that you could define Django settings in, such as `DEBUG = True`, and these settings will be loaded along with and override the settings defined in `settings.py`.
+For instance, if your hostname is `sir-robin`, the `createhostsettings` command will create a file, `config/sir_robin.py` that you could define Django settings in, such as `DEBUG = True`.  These settings will be loaded along with, and override, the settings defined in `settings.py`.
