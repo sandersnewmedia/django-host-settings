@@ -27,6 +27,7 @@ In your settings.py:
 
 Then run these commands:
 
+    $ python manage.py createhostsettings
     $ echo "import os" >> settings.py
     $ echo "PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))" >> settings.py
     $ echo "from django_host_settings.settings import *" >> settings.py
