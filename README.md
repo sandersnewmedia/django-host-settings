@@ -18,7 +18,7 @@ or
 
 Usage
 -----
-In your settings.py:
+In your `settings.py`:
 
     INSTALLED_APPS = (
         ...
