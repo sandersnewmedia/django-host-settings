@@ -12,11 +12,16 @@ class Command(BaseCommand):
         module_name = get_local_settings_module()
         module_path = os.path.join(settings.PROJECT_ROOT, 'config',
                                    '%s.py' % module_name)
+
         if os.path.exists(module_path):
             raise CommandError('%s already exists, nothing to do' % module_path)
+
         try:
             try:
-                os.makedirs(os.path.dirname(module_path))
+                dirname = os.path.dirname(module_path)
+                os.makedirs(dirname)
+                with open(os.path.join(dirname, '__init__.py'), 'w') as f:
+                    f.write('')
             except:
                 pass
             with open(module_path, 'w+b') as f:
