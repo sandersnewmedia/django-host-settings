@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    version = "0.2",
+    version = "0.3",
     name = "django-host-settings",
     packages = find_packages(),
     author = "Elijah Rutschman",

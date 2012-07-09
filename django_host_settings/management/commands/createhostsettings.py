@@ -10,8 +10,8 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         from django.conf import settings
         module_name = get_local_settings_module()
-        module_path = os.path.join(settings.PROJECT_ROOT, 'config',
-                                   '%s.py' % module_name)
+        module_path = os.path.abspath(os.path.join(settings.PROJECT_ROOT, '..',
+                                      'config', '%s.py' % module_name))
 
         if os.path.exists(module_path):
             raise CommandError('%s already exists, nothing to do' % module_path)
